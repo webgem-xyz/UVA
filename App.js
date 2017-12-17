@@ -1,14 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter, Route, Link } from 'react-router-native'
+
+// Import the components
+// import Header from './components/Header';
+import Overview from './components/MeasurementOverview';
+import Add from './components/Add';
+import Measurement from './components/Measurement';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <NativeRouter>
+        <View style={styles.container}>
+          <Route exact path="/" render={()=><Overview head="MEASUREMENTS" />} />
+          <Route path="/add" render={()=><Add head="ADD MEASUREMENT" />} />
+          <Route path="/view/:measurementId" render={()=><Measurement head="VIEW MEASUREMENT" />} />
+        </View>
+      </NativeRouter>
     );
   }
 }
@@ -17,7 +26,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });

@@ -1,0 +1,45 @@
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { Link } from 'react-router-native';
+
+export default class Header extends React.Component {
+  render() {
+    if (!this.props.noBack) {
+      return (
+        <View style={styles.nav}>
+          <Link to="/" style={styles.backArrow}>
+            <Image source={require('../img/chevron-left.png')} style={{ height: 30, width: 15 }} />
+          </Link>
+          <Text style={styles.pageHead}>{this.props.head}</Text>
+        </View>
+      );
+    }
+    return (
+      <View style={styles.nav}>
+        <Text style={styles.pageHead}>{this.props.head}</Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  nav: {
+    alignItems: 'center',
+    flex: 0,
+    flexDirection: 'row',
+    height: 70,
+    justifyContent: 'center',
+    paddingTop: 20,
+    width: '100%',
+  },
+  pageHead: {
+    color: '#333333',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  backArrow: {
+    position: 'absolute',
+    left: 5,
+    top: 30,
+  },
+});

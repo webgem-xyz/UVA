@@ -2,10 +2,34 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'react-router-native';
 
-// Components
+// Import Firebase Config
+import base from '../base';
+
+// Import Components
 import Header from './Header';
+import Item from './Item';
+
 
 export default class Overview extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      measurements: {}
+    };
+  }
+
+  componentWillMount(nextProps) {
+    this.ref = base.syncState(`/testuid/mes/`, {
+      context: this,
+      state: 'measurements'
+    });
+  }
+
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -18,6 +42,13 @@ export default class Overview extends React.Component {
             <View style={styles.listHead}>
               <Text style={styles.listHeadTag}>Date</Text>
               <Text style={styles.listHeadTag}>Uploaded</Text>
+            </View>
+            <View style={styles.dataWrap}>
+              {
+                Object
+                  .keys(this.state.measurements)
+                  .map((key) => <Item key={key} index={key} details={this.state.measurements[key]}/>)
+              }
             </View>
           </View>
         </View>
@@ -54,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   listHead: {
-    flex: 1,
+    flex: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

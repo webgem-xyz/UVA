@@ -24,6 +24,7 @@
     "re-base": "^3.2.1",
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-form-generator": "^0.9.9",
     "react-router-native": "^4.2.0"
   }
 }

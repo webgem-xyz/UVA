@@ -20,7 +20,7 @@ export default class Overview extends React.Component {
   }
 
   componentWillMount(nextProps) {
-    this.ref = base.syncState(`/testuid/mes/`, {
+    this.ref = base.syncState(`/${this.props.uid}/mes/`, {
       context: this,
       state: 'measurements'
     });

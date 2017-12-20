@@ -63,6 +63,12 @@ export default class Measurement extends React.Component {
               <Text style={styles.value}>{measurement.salinity}</Text>
             </View>
           }
+          {measurement.tempature &&
+            <View style={styles.row}>
+              <Text style={styles.label}>Tempature</Text>
+              <Text style={styles.value}>{measurement.tempature}</Text>
+            </View>
+          }
         </ScrollView>
       </View>
     );

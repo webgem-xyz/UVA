@@ -9,7 +9,6 @@ export default class Item extends React.Component {
       <Link style={styles.itemLink} to={`/view/${this.props.index}`}>
         <View style={styles.itemLinkWrap}>
           <Text style={styles.date}>{details.date}</Text>
-          <Text style={styles.percentage}>{details.uploadStat}</Text>
         </View>
       </Link>
     );

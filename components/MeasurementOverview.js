@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Link } from 'react-router-native';
 
 // Import Firebase Config
@@ -22,7 +22,7 @@ export default class Overview extends React.Component {
   componentWillMount(nextProps) {
     this.ref = base.syncState(`/${this.props.uid}/mes/`, {
       context: this,
-      state: 'measurements'
+      state: 'measurements',
     });
   }
 
@@ -41,15 +41,15 @@ export default class Overview extends React.Component {
           <View style={styles.data}>
             <View style={styles.listHead}>
               <Text style={styles.listHeadTag}>Date</Text>
-              <Text style={styles.listHeadTag}>Uploaded</Text>
             </View>
-            <View style={styles.dataWrap}>
+            <ScrollView style={styles.dataWrap}>
               {
                 Object
                   .keys(this.state.measurements)
+                  .reverse()
                   .map((key) => <Item key={key} index={key} details={this.state.measurements[key]}/>)
               }
-            </View>
+            </ScrollView>
           </View>
         </View>
       </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 // Import Firebase Login
@@ -31,6 +31,8 @@ export default class Login extends React.Component {
               style={styles.input}
               autoCorrect={false}
               placeholder="test@example.com"
+              keyboardType="email-adress"
+              returnKeyType="done"
             />
             <Text style={styles.label}>Password</Text>
             <TextInput
@@ -40,13 +42,13 @@ export default class Login extends React.Component {
               autoCorrect={false}
               secureTextEntry
               placeholder="**********"
+              returnKeyType="done"
             />
-            <Button
-              onPress={() => {
-                this.props.authenticate(this.state.email, this.state.password)
-              }}
-              title="LOG IN"
-            />
+            <TouchableOpacity onPress={() => { this.props.authenticate(this.state.email, this.state.password) }}>
+              <View style={styles.button}>
+                <Text style={styles.buttonText}>LOG IN</Text>
+              </View>
+            </TouchableOpacity>
           </KeyboardAwareScrollView>
         </View>
         <View>
@@ -89,4 +91,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  button: {
+    marginBottom: 0,
+    width: '80%',
+    top: 30,
+    left: '10%',
+    alignItems: 'center',
+    backgroundColor: '#444'
+  },
+  buttonText: {
+    padding: 20,
+    color: 'white'
+  }
 });

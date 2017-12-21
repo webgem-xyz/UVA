@@ -104,13 +104,13 @@ const styles = StyleSheet.create({
   },
   value: {
     fontWeight: '300',
-    fontSize: 14,
+    fontSize: 15,
     width: '50%',
-    color: '#444',
+    color: '#333',
   },
   label: {
     fontWeight: '900',
-    fontSize: 15,
+    fontSize: 16,
     color: '#555',
   }
 });

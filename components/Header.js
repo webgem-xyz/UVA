@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 0,
     flexDirection: 'row',
-    height: 70,
+    height: 80,
     justifyContent: 'center',
     paddingTop: 20,
     width: '100%',
@@ -39,7 +39,12 @@ const styles = StyleSheet.create({
   },
   backArrow: {
     position: 'absolute',
-    left: 5,
-    top: 30,
+    width: 70,
+    height: 50,
+    left: 0,
+    top: 25,
+    flex: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

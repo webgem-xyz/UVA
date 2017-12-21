@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import moment from 'moment';
 
@@ -116,6 +116,7 @@ export default class Add extends React.Component {
                   value={this.state.longitude}
                   style={styles.input}
                   autoCorrect={false}
+                  returnKeyType="done"
                 />
               </View>
               <View style={{width: '48%'}}>
@@ -125,6 +126,7 @@ export default class Add extends React.Component {
                   value={this.state.latitude}
                   style={styles.input}
                   autoCorrect={false}
+                  returnKeyType="done"
                 />
               </View>
             </View>
@@ -134,6 +136,8 @@ export default class Add extends React.Component {
               value={this.state.date}
               style={styles.input}
               autoCorrect={false}
+              returnKeyType="done"
+              selectionColor="#555"
             />
             <Text style={styles.label}>Acidity (Ph)</Text>
             <TextInput
@@ -141,6 +145,7 @@ export default class Add extends React.Component {
               value={this.state.acidity}
               style={styles.input}
               autoCorrect={false}
+              returnKeyType="done"
             />
             <Text style={styles.label}>Salinity (PSU)</Text>
             <TextInput
@@ -148,6 +153,7 @@ export default class Add extends React.Component {
               value={this.state.salinity}
               style={styles.input}
               autoCorrect={false}
+              returnKeyType="done"
             />
             <Text style={styles.label}>Tempature</Text>
             <TextInput
@@ -155,13 +161,13 @@ export default class Add extends React.Component {
               value={this.state.tempature}
               style={styles.input}
               autoCorrect={false}
+              returnKeyType="done"
             />
-            <Button
-              onPress={() => {
-                this.submitMeasurement()
-              }}
-              title="SUBMIT MEASUREMENT"
-            />
+            <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
+              <View style={styles.button}>
+                <Text style={styles.buttonText}>SUBMIT MEASUREMENT</Text>
+              </View>
+            </TouchableOpacity>
             { /* <AddFormField textInputEdit={this.textInputEdit}/> */}
           </View>
         </KeyboardAwareScrollView>
@@ -202,4 +208,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  button: {
+    marginBottom: 0,
+    width: '80%',
+    top: 30,
+    left: '10%',
+    alignItems: 'center',
+    backgroundColor: '#444'
+  },
+  buttonText: {
+    padding: 20,
+    color: 'white'
+  }
 });

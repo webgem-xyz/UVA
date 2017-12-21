@@ -20,7 +20,7 @@ export default class App extends React.Component {
     this.authenticate = this.authenticate.bind(this);
 
     this.state = {
-      uid: null,
+      uid: 'zwpWHiCt6nPF5k8ukEV8UCct76g1',
     };
   }
 

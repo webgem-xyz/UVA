@@ -21,11 +21,13 @@
   "dependencies": {
     "expo": "^23.0.4",
     "firebase": "^4.8.0",
+    "moment": "^2.20.1",
     "re-base": "^3.2.1",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-chooser": "^1.7.0",
     "react-native-form-generator": "^0.9.9",
+    "react-native-keyboard-aware-scroll-view": "^0.4.1",
     "react-router-native": "^4.2.0"
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 // Import Firebase Login
 import firebase from 'firebase/app';
@@ -18,33 +19,35 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Text>Logo</Text>
+        <View style={styles.logo}>
+          <Image source={require('../img/mymarine.jpeg')} style={{width: 150, height: 88}} />
         </View>
         <View>
-          <Text style={styles.label}>Username</Text>
-          <TextInput
-            onChangeText={(email) => this.setState({ email })}
-            value={this.state.email}
-            style={styles.input}
-            autoCorrect={false}
-            placeholder="test@example.com"
-          />
-          <Text style={styles.label}>Password</Text>
-          <TextInput
-            onChangeText={(password) => this.setState({ password })}
-            value={this.state.password}
-            style={styles.input}
-            autoCorrect={false}
-            secureTextEntry
-            placeholder="**********"
-          />
-          <Button
-            onPress={() => {
-              this.props.authenticate(this.state.email, this.state.password)
-            }}
-            title="LOG IN"
-          />
+          <KeyboardAwareScrollView>
+            <Text style={styles.label}>Username</Text>
+            <TextInput
+              onChangeText={(email) => this.setState({ email })}
+              value={this.state.email}
+              style={styles.input}
+              autoCorrect={false}
+              placeholder="test@example.com"
+            />
+            <Text style={styles.label}>Password</Text>
+            <TextInput
+              onChangeText={(password) => this.setState({ password })}
+              value={this.state.password}
+              style={styles.input}
+              autoCorrect={false}
+              secureTextEntry
+              placeholder="**********"
+            />
+            <Button
+              onPress={() => {
+                this.props.authenticate(this.state.email, this.state.password)
+              }}
+              title="LOG IN"
+            />
+          </KeyboardAwareScrollView>
         </View>
         <View>
           <Text style={styles.forgot}>I FORGOT MY PASSWORD</Text>
@@ -81,5 +84,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: '#333',
     fontWeight: '800',
+  },
+  logo: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

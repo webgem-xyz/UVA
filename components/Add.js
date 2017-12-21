@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, Button } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import moment from 'moment';
 
 // Import select
 import base from '../base';
@@ -27,7 +29,7 @@ export default class Add extends React.Component {
     this.state = {
       longitude: '',
       latitude: '',
-      date: `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`,
+      date: `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`,
       acidity: null,
       salinity: null,
       tempature: null,
@@ -71,7 +73,7 @@ export default class Add extends React.Component {
     const measurement = {
       longitude: this.state.longitude,
       latitude: this.state.latitude,
-      date: this.state.date,
+      date: moment(this.state.date, 'YYYY-MM-DD').format('YYYY-MM-DD'),
       acidity: this.state.acidity,
       salinity: this.state.salinity,
       tempature: this.state.tempature,
@@ -80,12 +82,13 @@ export default class Add extends React.Component {
   }
 
   addMeasurement(measurement) {
-    console.log(measurement)
     // Update our measurements state
     const measurements = { ...this.state.measurements };
     // add in our new measurement
     const timestamp = Date.now();
-    measurements[`measurement_${this.state.date}_${timestamp}`] = measurement;
+    const dateFormatted = moment(this.state.date, 'YYYY-MM-DD').format('YYYY-MM-DD');
+    console.log(dateFormatted);
+    measurements[`measurement_${dateFormatted}_${timestamp}`] = measurement;
     // set state
     this.setState({
       measurements,
@@ -103,41 +106,41 @@ export default class Add extends React.Component {
     return (
       <View style={styles.container}>
         <Header head={this.props.head}/>
-        <View style={styles.main}>
+        <KeyboardAwareScrollView style={styles.main}>
           <View>
             <View style={styles.beside}>
               <View style={{width: '48%'}}>
                 <Text style={styles.label}>Longtitude</Text>
                 <TextInput
-                onChangeText={(longitude) => this.setState({ longitude })}
-                value={this.state.longitude}
-                style={styles.input}
-                autoCorrect={false}
+                  onChangeText={(longitude) => this.setState({ longitude })}
+                  value={this.state.longitude}
+                  style={styles.input}
+                  autoCorrect={false}
                 />
               </View>
               <View style={{width: '48%'}}>
                 <Text style={styles.label}>Latitude</Text>
                 <TextInput
-                onChangeText={(latitude) => this.setState({ latitude })}
-                value={this.state.latitude}
-                style={styles.input}
-                autoCorrect={false}
+                  onChangeText={(latitude) => this.setState({ latitude })}
+                  value={this.state.latitude}
+                  style={styles.input}
+                  autoCorrect={false}
                 />
               </View>
             </View>
             <Text style={styles.label}>Date of measurement</Text>
             <TextInput
-            onChangeText={(date) => this.setState({ date })}
-            value={this.state.date}
-            style={styles.input}
-            autoCorrect={false}
+              onChangeText={(date) => this.setState({ date })}
+              value={this.state.date}
+              style={styles.input}
+              autoCorrect={false}
             />
             <Text style={styles.label}>Acidity (Ph)</Text>
             <TextInput
-            onChangeText={(acidity) => this.setState({ acidity })}
-            value={this.state.acidity}
-            style={styles.input}
-            autoCorrect={false}
+              onChangeText={(acidity) => this.setState({ acidity })}
+              value={this.state.acidity}
+              style={styles.input}
+              autoCorrect={false}
             />
             <Text style={styles.label}>Salinity (PSU)</Text>
             <TextInput
@@ -161,7 +164,7 @@ export default class Add extends React.Component {
             />
             { /* <AddFormField textInputEdit={this.textInputEdit}/> */}
           </View>
-        </View>
+        </KeyboardAwareScrollView>
       </View>
     );
   }

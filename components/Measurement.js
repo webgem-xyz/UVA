@@ -64,7 +64,7 @@ export default class Measurement extends React.Component {
             </View>
           }
           {measurement.tempature &&
-            <View style={styles.row}>
+            <View style={styles.rowodd}>
               <Text style={styles.label}>Tempature</Text>
               <Text style={styles.value}>{measurement.tempature}</Text>
             </View>

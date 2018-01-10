@@ -25,11 +25,12 @@ export default class Add extends React.Component {
     this.addMeasurement = this.addMeasurement.bind(this);
 
     const date = new Date();
+    const month = date.getMonth() + 1;
 
     this.state = {
       longitude: '',
       latitude: '',
-      date: `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`,
+      date: `${date.getFullYear()}-${month}-${date.getDate()}`,
       acidity: null,
       salinity: null,
       tempature: null,

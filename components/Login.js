@@ -23,7 +23,6 @@ export default class Login extends React.Component {
           <Image source={require('../img/mymarine.jpeg')} style={{width: 150, height: 88}} />
         </View>
         <View>
-          <KeyboardAwareScrollView>
             <Text style={styles.label}>Username</Text>
             <TextInput
               onChangeText={(email) => this.setState({ email })}
@@ -49,7 +48,6 @@ export default class Login extends React.Component {
                 <Text style={styles.buttonText}>LOG IN</Text>
               </View>
             </TouchableOpacity>
-          </KeyboardAwareScrollView>
         </View>
         <View>
           <Text style={styles.forgot}>I FORGOT MY PASSWORD</Text>

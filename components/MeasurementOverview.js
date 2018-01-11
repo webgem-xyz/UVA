@@ -33,7 +33,7 @@ export default class Overview extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header head={this.props.head} noBack="true"/>
+        <Header head={this.props.head} noBack="true" backCol="#ffffff"/>
         <View style={styles.main}>
           <Link to="/add" style={styles.button}>
             <Text style={styles.buttonText}>ADD MEASUREMENT+</Text>

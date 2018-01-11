@@ -6,7 +6,7 @@ export default class Header extends React.Component {
   render() {
     if (!this.props.noBack) {
       return (
-        <View style={styles.nav}>
+        <View style={[styles.nav, {backgroundColor: this.props.backCol}]}>
           <Link to="/" style={styles.backArrow}>
             <Image source={require('../img/chevron-left.png')} style={{ height: 30, width: 15 }} />
           </Link>

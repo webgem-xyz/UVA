@@ -106,7 +106,7 @@ export default class Add extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <Header head={this.props.head}/>
+        <Header head={this.props.head} backCol="#e7e7e7"/>
         <KeyboardAwareScrollView style={styles.main}>
           <View>
             <View style={styles.beside}>
@@ -131,15 +131,17 @@ export default class Add extends React.Component {
                 />
               </View>
             </View>
-            <Text style={styles.label}>Date of measurement</Text>
-            <TextInput
-              onChangeText={(date) => this.setState({ date })}
-              value={this.state.date}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-              selectionColor="#555"
-            />
+            <View style={{backgroundColor: '#e7e7e7', padding: 16, paddingTop: 0,}}>
+              <Text style={styles.label}>Date of measurement</Text>
+              <TextInput
+                onChangeText={(date) => this.setState({ date })}
+                value={this.state.date}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+                selectionColor="#555"
+              />
+            </View>
             <Text style={styles.label}>Acidity (Ph)</Text>
             <TextInput
               onChangeText={(acidity) => this.setState({ acidity })}
@@ -187,12 +189,12 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     width: '100%',
-    padding: 15,
+    padding: 0,
   },
   label: {
     fontWeight: '800',
-    fontSize: 15,
-    fontFamily: 'Quattrocento Sans',
+    fontSize: 16,
+    fontFamily: 'Quattrocento Sans Bold',
     color: '#444',
     marginTop: 5,
   },
@@ -201,6 +203,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderWidth: 0.5,
     fontFamily: 'Quattrocento Sans',
+    backgroundColor: '#ffffff',
     height: 35,
     width: '100%',
     marginTop: 5,
@@ -210,6 +213,9 @@ const styles = StyleSheet.create({
   beside: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: '#e7e7e7',
+    padding: 16,
+    paddingBottom: 0,
   },
   button: {
     marginBottom: 0,

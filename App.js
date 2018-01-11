@@ -12,16 +12,32 @@ import Login from './components/Login';
 import Overview from './components/MeasurementOverview';
 import Add from './components/Add';
 import Measurement from './components/Measurement';
+import Logout from './components/Logout';
+
+import { Font, AppLoading } from 'expo';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.authenticate = this.authenticate.bind(this);
+    this.logout = this.logout.bind(this);
 
     this.state = {
-      uid: null,
+      uid: 'testuid',
+      fontLoaded: false,
     };
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'Quattrocento Sans': require('./assets/fonts/QuattrocentoSans-Regular.ttf'),
+      'Quattrocento Sans Italic': require('./assets/fonts/QuattrocentoSans-Italic.ttf'),
+      'Quattrocento Sans Bold': require('./assets/fonts/QuattrocentoSans-Bold.ttf'),
+      'Quattrocento Sans Bold Italic': require('./assets/fonts/QuattrocentoSans-BoldItalic.ttf'),
+    });
+
+    this.setState({ fontLoaded: true })
   }
 
   logout() {
@@ -38,18 +54,28 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (this.state.uid === null) {
-      return <Login authenticate={this.authenticate} />
+    if (!this.state.fontLoaded) {
+      return (
+        <AppLoading
+          onError={console.warn}
+        />
+      )
     }
-    return (
-      <NativeRouter>
-        <View style={styles.container}>
-          <Route exact path="/" render={()=><Overview head="MEASUREMENTS" uid={this.state.uid} />} />
-          <Route path="/add" render={()=><Add head="ADD MEASUREMENT" uid={this.state.uid} />} />
-          <Route path="/view/:measurementId" render={({match}) => <Measurement head="VIEW MEASUREMENT" match={match} uid={this.state.uid} />} />
-        </View>
-      </NativeRouter>
-    );
+    if (this.state.fontLoaded === true) {
+      if (this.state.uid === null) {
+        return <Login authenticate={this.authenticate} />
+      }
+      return (
+        <NativeRouter>
+          <View style={styles.container}>
+            <Route exact path="/" render={() => <Overview head="DASHBOARD" uid={this.state.uid} />} />
+            <Route path="/add" render={() => <Add head="ADD MEASUREMENT" uid={this.state.uid} />} />
+            <Route path="/view/:measurementId" render={({ match }) => <Measurement head="VIEW MEASUREMENT" match={match} uid={this.state.uid} />} />
+            <Route path="/logout" render={() => <Logout logout={this.logout} head="ACCOUNT" uid={this.state.uid} />} />
+          </View>
+        </NativeRouter>
+      );
+    }
   }
 }
 

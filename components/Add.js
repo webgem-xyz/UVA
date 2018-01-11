@@ -106,12 +106,12 @@ export default class Add extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <Header head={this.props.head}/>
+        <Header head={this.props.head} backCol="#e7e7e7"/>
         <KeyboardAwareScrollView style={styles.main}>
           <View>
             <View style={styles.beside}>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Longtitude</Text>
+                <Text style={styles.label}>Longtitude *</Text>
                 <TextInput
                   onChangeText={(longitude) => this.setState({ longitude })}
                   value={this.state.longitude}
@@ -121,7 +121,7 @@ export default class Add extends React.Component {
                 />
               </View>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Latitude</Text>
+                <Text style={styles.label}>Latitude *</Text>
                 <TextInput
                   onChangeText={(latitude) => this.setState({ latitude })}
                   value={this.state.latitude}
@@ -131,44 +131,48 @@ export default class Add extends React.Component {
                 />
               </View>
             </View>
-            <Text style={styles.label}>Date of measurement</Text>
-            <TextInput
-              onChangeText={(date) => this.setState({ date })}
-              value={this.state.date}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-              selectionColor="#555"
-            />
-            <Text style={styles.label}>Acidity (Ph)</Text>
-            <TextInput
-              onChangeText={(acidity) => this.setState({ acidity })}
-              value={this.state.acidity}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <Text style={styles.label}>Salinity (PSU)</Text>
-            <TextInput
-              onChangeText={(salinity) => this.setState({ salinity })}
-              value={this.state.salinity}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <Text style={styles.label}>Tempature</Text>
-            <TextInput
-              onChangeText={(tempature) => this.setState({ tempature })}
-              value={this.state.tempature}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>SUBMIT MEASUREMENT</Text>
-              </View>
-            </TouchableOpacity>
+            <View style={{backgroundColor: '#e7e7e7', padding: 16, paddingTop: 0,}}>
+              <Text style={styles.label}>Date of measurement *</Text>
+              <TextInput
+                onChangeText={(date) => this.setState({ date })}
+                value={this.state.date}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+                selectionColor="#555"
+              />
+            </View>
+            <View style={{padding: 16}}>
+              <Text style={styles.label}>Acidity (Ph)</Text>
+              <TextInput
+                onChangeText={(acidity) => this.setState({ acidity })}
+                value={this.state.acidity}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <Text style={styles.label}>Salinity (PSU)</Text>
+              <TextInput
+                onChangeText={(salinity) => this.setState({ salinity })}
+                value={this.state.salinity}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <Text style={styles.label}>Tempature</Text>
+              <TextInput
+                onChangeText={(tempature) => this.setState({ tempature })}
+                value={this.state.tempature}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
+                <View style={styles.button}>
+                  <Text style={styles.buttonText}>SUBMIT MEASUREMENT</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
             { /* <AddFormField textInputEdit={this.textInputEdit}/> */}
           </View>
         </KeyboardAwareScrollView>
@@ -187,11 +191,12 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     width: '100%',
-    padding: 15,
+    padding: 0,
   },
   label: {
     fontWeight: '800',
-    fontSize: 15,
+    fontSize: 16,
+    fontFamily: 'Quattrocento Sans Bold',
     color: '#444',
     marginTop: 5,
   },
@@ -199,6 +204,8 @@ const styles = StyleSheet.create({
     borderColor: '#333',
     borderStyle: 'solid',
     borderWidth: 0.5,
+    fontFamily: 'Quattrocento Sans',
+    backgroundColor: '#ffffff',
     height: 35,
     width: '100%',
     marginTop: 5,
@@ -208,6 +215,9 @@ const styles = StyleSheet.create({
   beside: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: '#e7e7e7',
+    padding: 16,
+    paddingBottom: 0,
   },
   button: {
     marginBottom: 0,
@@ -219,6 +229,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     padding: 20,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Quattrocento Sans',
   }
 });

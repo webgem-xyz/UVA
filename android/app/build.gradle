@@ -5,7 +5,7 @@ android {
   buildToolsVersion '26.0.1'
 
   defaultConfig {
-    applicationId "UvaAppWebgem"
+    applicationId "com.uvawebgemapp"
     minSdkVersion 19
     targetSdkVersion 25
     versionCode 1
@@ -18,10 +18,23 @@ android {
       'appAuthRedirectScheme': 'UvaAppWebgem'
     ]
   }
+
+  signingConfigs {
+    release {
+      if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+        storeFile file(MYAPP_RELEASE_STORE_FILE)
+        storePassword MYAPP_RELEASE_STORE_PASSWORD
+        keyAlias MYAPP_RELEASE_KEY_ALIAS
+        keyPassword MYAPP_RELEASE_KEY_PASSWORD
+      }
+    }
+  }
+
   buildTypes {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.release
     }
   }
   dexOptions {
@@ -52,12 +65,18 @@ repositories{
 }
 
 dependencies {
+  compile(project(':react-native-firebase')) {
+    transitive = false
+  }
+
+  compile "com.google.android.gms:play-services-base:11.6.0"
+  compile "com.google.firebase:firebase-core:11.6.0"
   compile fileTree(dir: 'libs', include: ['*.jar'])
   testCompile 'junit:junit:4.12'
   compile 'com.android.support:appcompat-v7:26.0.1'
   compile 'com.android.support:multidex:1.0.1'
 
-  
+
   compile('host.exp.exponent:expoview:23.0.0@aar') {
     exclude group: 'com.facebook.android', module: 'facebook-android-sdk'
     exclude group: 'com.facebook.android', module: 'audience-network-sdk'
@@ -72,6 +91,9 @@ dependencies {
   compile('io.nlopez.smartlocation:library:3.2.11') {
     transitive = false
   }
-  
-  
+
+
 }
+
+
+apply plugin: 'com.google.gms.google-services'

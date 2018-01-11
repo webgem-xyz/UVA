@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>UvaAppWebgem</string>
+	<string>com.uvaappwebgem</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -67,7 +67,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow UVA-App to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow UVA-App to access your device's accelerometer</string>
+	<string>Allow UVA-App to access your device&apos;s accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Give UVA-App permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>

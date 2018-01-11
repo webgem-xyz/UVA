@@ -1,6 +1,7 @@
 // Copyright 2015-present 650 Industries. All rights reserved.
 
 #import "AppDelegate.h"
+#import <Firebase.h>
 #import "ExpoKit.h"
 #import "EXViewController.h"
 
@@ -14,15 +15,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [FIRApp configure];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     [[ExpoKit sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     _rootViewController = [ExpoKit sharedInstance].rootViewController;
     _window.rootViewController = _rootViewController;
-    
+
     [_rootViewController loadReactApplication];
     [_window makeKeyAndVisible];
-    
+
     return YES;
 }
 

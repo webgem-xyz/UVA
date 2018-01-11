@@ -21,6 +21,7 @@
     "react": "16.0.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
     "react-native-chooser": "^1.7.0",
+    "react-native-firebase": "^3.2.1",
     "react-native-form-generator": "^0.9.9",
     "react-native-keyboard-aware-scroll-view": "^0.4.1",
     "react-router-native": "^4.2.0"

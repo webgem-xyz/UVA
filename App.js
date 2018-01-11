@@ -13,6 +13,8 @@ import Overview from './components/MeasurementOverview';
 import Add from './components/Add';
 import Measurement from './components/Measurement';
 
+import { Font } from 'expo';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,15 @@ export default class App extends React.Component {
     this.state = {
       uid: null,
     };
+  }
+
+  componentDidMount() {
+    Font.loadAsync({
+      'Quattrocento Sans': require('./assets/fonts/QuattrocentoSans-Regular.ttf'),
+      'Quattrocento Sans Italic': require('./assets/fonts/QuattrocentoSans-Italic.ttf'),
+      'Quattrocento Sans Bold': require('./assets/fonts/QuattrocentoSans-Bold.ttf'),
+      'Quattrocento Sans Bold Italic': require('./assets/fonts/QuattrocentoSans-BoldItalic.ttf'),
+    });
   }
 
   logout() {

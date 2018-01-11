@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   },
   date: {
     fontWeight: '700',
+    fontFamily: 'Quattrocento Sans',
     fontSize: 16,
     color: '#333',
   },

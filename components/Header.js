@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily: 'Quattrocento Sans',
   },
   backArrow: {
     position: 'absolute',

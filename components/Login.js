@@ -16,6 +16,7 @@ export default class Login extends React.Component {
       password: ''
     }
   }
+
   render() {
     return (
       <View style={styles.container}>

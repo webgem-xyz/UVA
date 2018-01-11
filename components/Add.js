@@ -221,6 +221,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     padding: 20,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Quattrocento Sans',
   }
 });

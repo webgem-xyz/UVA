@@ -10,7 +10,9 @@ import java.util.List;
 // Needed for `react-native link`
 import com.facebook.react.ReactApplication;
 import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 
 public class MainApplication extends MultiDexApplication {
 
@@ -22,8 +24,10 @@ public class MainApplication extends MultiDexApplication {
 
         // Needed for `react-native link`
           new MainReactPackage(),
+            new RNFirebasePackage(),
           new RNFirebasePackage(),
-          new RNFirebaseDatabasePackage()
+          new RNFirebaseDatabasePackage(),
+          new RNFirebaseAuthPackage()
     );
   }
 }

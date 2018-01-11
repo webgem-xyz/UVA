@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>373451612701-6ss9r6c953b2cqvib7mks6c0lvcfjc48.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.373451612701-6ss9r6c953b2cqvib7mks6c0lvcfjc48</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAIzi83OXE1lo8CCOCly5BTuWDlzDwJqSw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>373451612701</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.uvaappwebgem</string>
+	<key>PROJECT_ID</key>
+	<string>uva-reactnativeapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>uva-reactnativeapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:373451612701:ios:f6c263f319241dee</string>
+	<key>DATABASE_URL</key>
+	<string>https://uva-reactnativeapp.firebaseio.com</string>
+</dict>
+</plist>

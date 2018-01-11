@@ -64,16 +64,30 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.29.0):
     - FBSDKCoreKit
+  - Firebase/Auth (4.8.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.4.1)
   - Firebase/Core (4.8.0):
     - FirebaseAnalytics (= 4.0.5)
     - FirebaseCore (= 4.0.13)
+  - Firebase/Database (4.8.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.3)
   - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
+  - FirebaseAuth (4.4.1):
+    - FirebaseAnalytics (~> 4.0)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.13):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.3):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
   - Folly (2016.09.26.00):
@@ -100,12 +114,21 @@ PODS:
     - GoogleNetworkingUtilities (~> 1.0)
     - GoogleUtilities (~> 1.0)
   - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GoogleUtilities (1.3.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GPUImage (0.1.7)
+  - GTMSessionFetcher/Core (1.1.12)
+  - leveldb-library (1.20)
   - lottie-ios (2.1.5)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -162,7 +185,9 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - ExpoKit/Core (from `http://github.com/expo/expo.git`, tag `ios/2.1.4`)
   - ExpoKit/CPP (from `http://github.com/expo/expo.git`, tag `ios/2.1.4`)
+  - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - GLog (from `../node_modules/react-native/third-party-podspecs/GLog.podspec`)
   - React/ART (from `../node_modules/react-native`)
@@ -218,7 +243,9 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 18a2cd118aef11dd657fe7e8b64bae5c719088b2
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
   FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   Folly: b7255b29f1d693c375d642d0f04f0592181156d9
   GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
@@ -232,11 +259,13 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: 836cdbba92f62f3c6a00e37a4ce485321fe317cf
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   React: 0ba6cae888dc82dc47d6d5f3090615e1b5f6f3e7
   yoga: faecc6be81ca7823ccbb470b93a1b228499fa1c0
 
-PODFILE CHECKSUM: 31166ee46e55464885df233522902f94ee387664
+PODFILE CHECKSUM: 65007357d0bac8a50f555dfaa916c91731c91b9e
 
 COCOAPODS: 1.3.1

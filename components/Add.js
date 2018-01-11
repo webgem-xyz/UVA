@@ -106,32 +106,34 @@ export default class Add extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <Header head={this.props.head}/>
+        <Header head={this.props.head} backCol="#E7E7E7"/>
         <KeyboardAwareScrollView style={styles.main}>
           <View>
             <View style={styles.beside}>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Longtitude</Text>
+                <Text style={styles.label}>Longtitude *</Text>
                 <TextInput
                   onChangeText={(longitude) => this.setState({ longitude })}
                   value={this.state.longitude}
                   style={styles.input}
                   autoCorrect={false}
                   returnKeyType="done"
+                  keyboardType="numeric"
                 />
               </View>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Latitude</Text>
+                <Text style={styles.label}>Latitude *</Text>
                 <TextInput
                   onChangeText={(latitude) => this.setState({ latitude })}
                   value={this.state.latitude}
                   style={styles.input}
                   autoCorrect={false}
                   returnKeyType="done"
+                  keyboardType="numeric"
                 />
               </View>
             </View>
-            <Text style={styles.label}>Date of measurement</Text>
+            <Text style={styles.label}>Date of measurement *</Text>
             <TextInput
               onChangeText={(date) => this.setState({ date })}
               value={this.state.date}
@@ -147,6 +149,7 @@ export default class Add extends React.Component {
               style={styles.input}
               autoCorrect={false}
               returnKeyType="done"
+              keyboardType="numeric"
             />
             <Text style={styles.label}>Salinity (PSU)</Text>
             <TextInput
@@ -155,6 +158,7 @@ export default class Add extends React.Component {
               style={styles.input}
               autoCorrect={false}
               returnKeyType="done"
+              keyboardType="numeric"
             />
             <Text style={styles.label}>Tempature</Text>
             <TextInput
@@ -163,6 +167,7 @@ export default class Add extends React.Component {
               style={styles.input}
               autoCorrect={false}
               returnKeyType="done"
+              keyboardType="numeric"
             />
             <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
               <View style={styles.button}>

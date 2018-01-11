@@ -8,8 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 // Needed for `react-native link`
-// import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactApplication;
 import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.database.RNFirebaseDatabasePackage;
 
 public class MainApplication extends MultiDexApplication {
 
@@ -20,8 +21,9 @@ public class MainApplication extends MultiDexApplication {
         // TODO: add cool native modules
 
         // Needed for `react-native link`
-        // new MainReactPackage(),
-            new RNFirebasePackage()
+          new MainReactPackage(),
+          new RNFirebasePackage(),
+          new RNFirebaseDatabasePackage()
     );
   }
 }

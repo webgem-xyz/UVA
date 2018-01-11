@@ -31,7 +31,7 @@ export default class Measurement extends React.Component {
     const measurement = this.state.measurement;
     return (
       <View style={styles.container}>
-        <Header head={this.props.head}/>
+        <Header head={this.props.head} backCol="#ffffff"/>
         <ScrollView style={styles.main}>
           {measurement.longitude &&
             <View style={styles.row}>

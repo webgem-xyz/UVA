@@ -12,6 +12,7 @@ import Login from './components/Login';
 import Overview from './components/MeasurementOverview';
 import Add from './components/Add';
 import Measurement from './components/Measurement';
+import Logout from './components/Logout';
 
 import { Font, AppLoading } from 'expo';
 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
     super(props);
 
     this.authenticate = this.authenticate.bind(this);
+    this.logout = this.logout.bind(this);
 
     this.state = {
       uid: 'testuid',
@@ -66,9 +68,10 @@ export default class App extends React.Component {
       return (
         <NativeRouter>
           <View style={styles.container}>
-            <Route exact path="/" render={() => <Overview head="MEASUREMENTS" uid={this.state.uid} />} />
+            <Route exact path="/" render={() => <Overview head="DASHBOARD" uid={this.state.uid} />} />
             <Route path="/add" render={() => <Add head="ADD MEASUREMENT" uid={this.state.uid} />} />
             <Route path="/view/:measurementId" render={({ match }) => <Measurement head="VIEW MEASUREMENT" match={match} uid={this.state.uid} />} />
+            <Route path="/logout" render={() => <Logout logout={this.logout} head="ACCOUNT" uid={this.state.uid} />} />
           </View>
         </NativeRouter>
       );

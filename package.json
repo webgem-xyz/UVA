@@ -23,6 +23,7 @@
     "react-native-chooser": "^1.7.0",
     "react-native-form-generator": "^0.9.9",
     "react-native-keyboard-aware-scroll-view": "^0.4.1",
+    "react-native-maps": "^0.19.0",
     "react-router-native": "^4.2.0"
   },
   "rnpm": {

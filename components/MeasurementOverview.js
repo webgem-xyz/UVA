@@ -33,11 +33,19 @@ export default class Overview extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header head={this.props.head} noBack="true" backCol="#ffffff"/>
+        <Header head={this.props.head} noBack="true" backCol="#ffffff" />
+        <Link to="/logout"><Text>profile **placeholder**</Text></Link>
         <View style={styles.main}>
+          <Text style={{ fontFamily: 'Quattrocento Sans Bold', fontSize: 17, paddingBottom: 10 }}>ADD DATA +</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Link to="/add" style={styles.button}>
-            <Text style={styles.buttonText}>ADD MEASUREMENT+</Text>
+          <Text style={styles.buttonText}>Add Measurement</Text>
           </Link>
+          <Link style={styles.button}>
+          <Text style={styles.buttonText}>Add Media</Text>
+          </Link>
+          </View>
+          <Text style={{ fontFamily: 'Quattrocento Sans Bold', fontSize: 17, paddingBottom: 0, paddingTop: 25 }}>OVERVIEW</Text>
           <View style={styles.data}>
             <View style={styles.listHead}>
               <Text style={styles.listHeadTag}>Date</Text>
@@ -71,7 +79,7 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 0,
-    width: '100%',
+    width: '49.5%',
     backgroundColor: '#444',
     padding: 20,
   },
@@ -79,6 +87,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '800',
     textAlign: 'center',
+    fontFamily: 'Quattrocento Sans'
   },
   data: {
     flex: 2,
@@ -92,5 +101,6 @@ const styles = StyleSheet.create({
   listHeadTag: {
     color: '#333',
     fontWeight: '700',
+    fontFamily: 'Quattrocento Sans',
   },
 });

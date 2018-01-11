@@ -111,7 +111,7 @@ export default class Add extends React.Component {
           <View>
             <View style={styles.beside}>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Longtitude</Text>
+                <Text style={styles.label}>Longtitude *</Text>
                 <TextInput
                   onChangeText={(longitude) => this.setState({ longitude })}
                   value={this.state.longitude}
@@ -121,7 +121,7 @@ export default class Add extends React.Component {
                 />
               </View>
               <View style={{width: '48%'}}>
-                <Text style={styles.label}>Latitude</Text>
+                <Text style={styles.label}>Latitude *</Text>
                 <TextInput
                   onChangeText={(latitude) => this.setState({ latitude })}
                   value={this.state.latitude}
@@ -132,7 +132,7 @@ export default class Add extends React.Component {
               </View>
             </View>
             <View style={{backgroundColor: '#e7e7e7', padding: 16, paddingTop: 0,}}>
-              <Text style={styles.label}>Date of measurement</Text>
+              <Text style={styles.label}>Date of measurement *</Text>
               <TextInput
                 onChangeText={(date) => this.setState({ date })}
                 value={this.state.date}
@@ -142,35 +142,37 @@ export default class Add extends React.Component {
                 selectionColor="#555"
               />
             </View>
-            <Text style={styles.label}>Acidity (Ph)</Text>
-            <TextInput
-              onChangeText={(acidity) => this.setState({ acidity })}
-              value={this.state.acidity}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <Text style={styles.label}>Salinity (PSU)</Text>
-            <TextInput
-              onChangeText={(salinity) => this.setState({ salinity })}
-              value={this.state.salinity}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <Text style={styles.label}>Tempature</Text>
-            <TextInput
-              onChangeText={(tempature) => this.setState({ tempature })}
-              value={this.state.tempature}
-              style={styles.input}
-              autoCorrect={false}
-              returnKeyType="done"
-            />
-            <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
-              <View style={styles.button}>
-                <Text style={styles.buttonText}>SUBMIT MEASUREMENT</Text>
-              </View>
-            </TouchableOpacity>
+            <View style={{padding: 16}}>
+              <Text style={styles.label}>Acidity (Ph)</Text>
+              <TextInput
+                onChangeText={(acidity) => this.setState({ acidity })}
+                value={this.state.acidity}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <Text style={styles.label}>Salinity (PSU)</Text>
+              <TextInput
+                onChangeText={(salinity) => this.setState({ salinity })}
+                value={this.state.salinity}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <Text style={styles.label}>Tempature</Text>
+              <TextInput
+                onChangeText={(tempature) => this.setState({ tempature })}
+                value={this.state.tempature}
+                style={styles.input}
+                autoCorrect={false}
+                returnKeyType="done"
+              />
+              <TouchableOpacity onPress={() => { this.submitMeasurement() }}>
+                <View style={styles.button}>
+                  <Text style={styles.buttonText}>SUBMIT MEASUREMENT</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
             { /* <AddFormField textInputEdit={this.textInputEdit}/> */}
           </View>
         </KeyboardAwareScrollView>

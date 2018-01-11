@@ -21,7 +21,7 @@ export default class Login extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
-          <Image source={require('../img/mymarine.jpeg')} style={{width: 150, height: 88}} />
+          <Image source={require('../img/logo.png')} style={{width: 150, height: 88}} />
         </View>
         <View>
             <Text style={styles.label}>Username</Text>
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#333',
     marginTop: 5,
+    fontFamily: 'Quattrocento Sans',
   },
   input: {
     borderColor: '#333',
@@ -80,11 +81,13 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
     padding: 5,
+    fontFamily: 'Quattrocento Sans',
   },
   forgot: {
     alignSelf: 'center',
     color: '#333',
     fontWeight: '800',
+    fontFamily: 'Quattrocento Sans',
   },
   logo: {
     justifyContent: 'center',
@@ -100,6 +103,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     padding: 20,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Quattrocento Sans',
   }
 });

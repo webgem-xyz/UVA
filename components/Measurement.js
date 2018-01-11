@@ -33,6 +33,9 @@ export default class Measurement extends React.Component {
       <View style={styles.container}>
         <Header head={this.props.head} backCol="#ffffff"/>
         <ScrollView style={styles.main}>
+          <View style={{flex: 1, height: 150, backgroundColor: '#66bec2', marginLeft: -16, marginRight: -16}}>
+            <Text>Placeholder Map</Text>
+          </View>
           {measurement.longitude &&
             <View style={styles.row}>
               <Text style={styles.label}>Longitude</Text>

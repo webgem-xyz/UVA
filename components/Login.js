@@ -30,7 +30,7 @@ export default class Login extends React.Component {
               style={styles.input}
               autoCorrect={false}
               placeholder="test@example.com"
-              keyboardType="email-adress"
+              keyboardType="email-address"
               returnKeyType="done"
             />
             <Text style={styles.label}>Password</Text>

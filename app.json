@@ -1,5 +1,22 @@
 {
   "expo": {
-    "sdkVersion": "23.0.0"
+    "sdkVersion": "23.0.0",
+    "ios": {
+      "bundleIdentifier": "com.webgemuvaapp.ios",
+      "publishBundlePath": "ios/uva-app/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/uva-app/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "package": "com.webgemuvaapp.android"
+    },
+    "name": "UVA-App",
+    "slug": "uva-app",
+    "version": "0.1.0",
+    "isDetached": true,
+    "detach": {
+      "scheme": "exp58df64d6f5fa47899727a61756b0e98b",
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.1.4-sdk23.0.0-f67c5bc3-4a27-40f6-8686-91e8f868a145.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.1.2-sdk23.0.0-d47f172b-1ed3-4c8f-9e48-239052c678b6.tar.gz"
+    }
   }
 }

@@ -13,6 +13,8 @@ import AddFormField from './AddFormField';
 import { Redirect } from 'react-router-native';
 import Measurement from './Measurement';
 
+import Font from 'expo';
+
 export default class Add extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +51,15 @@ export default class Add extends React.Component {
 
   componentWillUnmount() {
     base.removeBinding(this.ref);
+  }
+
+  componentDidMount() {
+    Font.loadAsync({
+      'Quattrocento Sans': require('./assets/fonts/QuattrocentoSans-Regular.ttf'),
+      'Quattrocento Sans Italic': require('./assets/fonts/QuattrocentoSans-Italic.ttf'),
+      'Quattrocento Sans Bold': require('./assets/fonts/QuattrocentoSans-Bold.ttf'),
+      'Quattrocento Sans Bold Italic': require('./assets/fonts/QuattrocentoSans-BoldItalic.ttf'),
+    });
   }
 
   textInputEdit(kind, value) {
@@ -192,6 +203,7 @@ const styles = StyleSheet.create({
   label: {
     fontWeight: '800',
     fontSize: 15,
+    fontFamily: 'Quattrocento Sans',
     color: '#444',
     marginTop: 5,
   },

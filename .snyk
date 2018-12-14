@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -23,6 +23,118 @@ patch:
         patched: '2018-07-13T08:30:42.203Z'
     - react-native-scripts > xdl > jsonwebtoken > joi > topo > hoek:
         patched: '2018-07-13T08:30:42.203Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-14T02:30:37.169Z'
   'npm:lodash:20180130':
     - react-native > plist > xmlbuilder > lodash:
         patched: '2018-07-13T08:30:42.203Z'

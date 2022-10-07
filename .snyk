@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.25.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -18,11 +18,133 @@ patch:
         patched: '2018-07-13T08:30:42.203Z'
     - react-native > connect > compression > debug:
         patched: '2018-07-13T08:30:42.203Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2022-10-07T17:04:16.288Z'
   'npm:hoek:20180212':
     - react-native-scripts > xdl > jsonwebtoken > joi > hoek:
         patched: '2018-07-13T08:30:42.203Z'
     - react-native-scripts > xdl > jsonwebtoken > joi > topo > hoek:
         patched: '2018-07-13T08:30:42.203Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-07T17:04:16.288Z'
   'npm:lodash:20180130':
     - react-native > plist > xmlbuilder > lodash:
         patched: '2018-07-13T08:30:42.203Z'
@@ -55,3 +177,44 @@ patch:
         patched: '2018-07-13T08:30:42.203Z'
     - react-native > connect > serve-index > accepts > negotiator:
         patched: '2018-07-13T08:30:42.203Z'
+  'npm:extend:20180424':
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-10-07T17:04:16.288Z'
+  'npm:stringstream:20180511':
+    - firebase > @firebase/firestore > grpc > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - re-base > firebase > @firebase/firestore > grpc > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-10-07T17:04:16.288Z'
+  'npm:tough-cookie:20170905':
+    - react-native > metro-bundler > jest-haste-map > sane > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-haste-map > sane > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-haste-map > sane > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2022-10-07T17:04:16.288Z'
+    - jest-expo > jest > jest-cli > jest-runner > jest-runtime > jest-haste-map > sane > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2022-10-07T17:04:16.288Z'

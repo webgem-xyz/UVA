@@ -14,7 +14,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "jest": {
@@ -23,7 +23,7 @@
   "dependencies": {
     "expo": "^23.0.4",
     "firebase": "^4.8.0",
-    "moment": "^2.20.1",
+    "moment": "^2.29.4",
     "re-base": "^3.2.1",
     "react": "16.0.0",
     "react-native": "0.50.3",
@@ -31,7 +31,7 @@
     "react-native-form-generator": "^0.9.9",
     "react-native-keyboard-aware-scroll-view": "^0.4.1",
     "react-router-native": "^4.2.0",
-    "snyk": "^1.88.2"
+    "@snyk/protect": "latest"
   },
   "snyk": true
 }
